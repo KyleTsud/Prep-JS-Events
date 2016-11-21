@@ -16,7 +16,7 @@
 /*Exercise 4.  Instruct the following function to display the message "My name is Lee, Brrruuuce Lee!" in the paragraph element after the button is clicked.*/
 
   function kungfu(){
-    document.getElementById("name").innerHTML = "My name is Lee, Brrruuuce Lee!";
+    document.getElementById("beWater").innerHTML = "My name is Lee, Brrruuuce Lee!";
   }
 
 
@@ -28,26 +28,32 @@ window.onload = function (){
 
 var firstQuote = "Our lives are defined by opportunities; even the ones we miss.";
 
-document.getElementById("Benjamin").addEventListener(______, sayQuote);
+document.getElementById("Benjamin").addEventListener('click', sayQuote);
 
 function sayQuote(){
-  document._________(_______).__________ = __________;
+  document.getElementById("Benjamin").innerHTML = firstQuote; 
 }
 
 
 /*Exercise 6. Add another event listener to the image below that will display an inspirational quote from our beloved DJ Khaled after it is clicked</p>*/
 
-document.getElementById().addEventListener("click", rap);
+document.getElementById("khaled").addEventListener("click", rap);
 
-// function (){
-//   document = "another one, another one, another one...and another one";
-// }
+function rap (){
+  document.getElementById("wedabest").innerHTML = "another one, another one, another one...and another one";
+}
 
 
 /*Exercise 7.  Generate a random quote from clicking on a button*/
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+document.getElementById("change").addEventListener("click", sayQuote);
 
+function sayQuote (){
+  var max = quotes.length;
+  var randomX = Math.floor(Math.random()*max);
+  document.getElementById("displayQuotes").innerHTML = quotes[randomX];
+}
                                                    
 /*Exercise 8. Create an event listener that will show and hide the message when clicking on the button.*/
 
