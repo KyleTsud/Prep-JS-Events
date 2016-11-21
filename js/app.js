@@ -57,7 +57,16 @@ function sayQuote (){
                                                    
 /*Exercise 8. Create an event listener that will show and hide the message when clicking on the button.*/
 
-
+var pElement = document.getElementById("hideandseek");
+pElement.addEventListener('click', display);
+function display(){
+  var pElement2 = document.getElementById("showmoney");
+  if(pElement2.style.display === 'none'){
+    pElement2.style.display = 'block';
+  }else{
+    pElement2.style.display = 'none';
+  }
+}
 
 /*Final Boss:
 Make a visual list of the items in the orders array. When clicking on the product, you must show and hide the price for that item.*/
